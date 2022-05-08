@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initBottomNavigationView();
+        changeFragment(CalculatorFragment.class);
     }
 
     private void initBottomNavigationView() {
