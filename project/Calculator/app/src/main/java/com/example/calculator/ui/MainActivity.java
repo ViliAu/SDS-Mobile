@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemReselectedListener(item -> System.out.println(item.getItemId()));
     }
 
-    private void changeFragment(Class<? extends Fragment> f) {
+    public void changeFragment(Class<? extends Fragment> f) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(binding.fragmentContainer.getId(), f, null);
-        transaction.addToBackStack(null);
+        //transaction.addToBackStack(null);
         transaction.commit();
     }
 }

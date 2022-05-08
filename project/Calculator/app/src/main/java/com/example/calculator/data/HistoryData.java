@@ -9,12 +9,23 @@ public class HistoryData {
     private HistoryData() {}
 
     private ArrayList<String> historyList = new ArrayList<>();
+    private String placeHolderFormula = "0";
 
     public void appendList(String formula) {
-        historyList.add(formula);
+        this.historyList.add(formula);
     }
 
     public ArrayList<String> getList() {
-        return historyList;
+        return this.historyList;
+    }
+
+    public String getPlaceHolderFormula() {
+        String f = placeHolderFormula;
+        placeHolderFormula = "0";
+        return f;
+    }
+
+    public void setPlaceHolderFormula(String placeHolderFormula) {
+        this.placeHolderFormula = placeHolderFormula;
     }
 }

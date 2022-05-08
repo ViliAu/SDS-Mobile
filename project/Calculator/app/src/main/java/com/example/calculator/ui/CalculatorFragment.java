@@ -26,6 +26,8 @@ public class CalculatorFragment extends Fragment {
         initSymbolButtons();
         initNumberButtons();
         initOther();
+        mathString = HistoryData.instance.getPlaceHolderFormula();
+        binding.tvFormula.setText(mathString);
         return binding.getRoot();
     }
 
@@ -113,7 +115,7 @@ public class CalculatorFragment extends Fragment {
     }
 
     private void appendMathString(String c) {
-        if (mathString.equals("NaN")) {
+        if (mathString.equals("NaN") || mathString.equals("0")) {
             mathString = "";
         }
         mathString += c;
@@ -135,7 +137,7 @@ public class CalculatorFragment extends Fragment {
     }
 
     private void evaluateMathString() {
-        if (!mathString.matches(".*([0-9]|\\))")) {
+        if (mathString.length() > 0 && !mathString.matches(".*([0-9]|\\))")) {
             erase();
             evaluateMathString();
         }
@@ -147,6 +149,10 @@ public class CalculatorFragment extends Fragment {
 
     private void calculateMathString() {
         evaluateMathString();
+        if (mathString.length() == 0) {
+            appendMathString("0");
+            return;
+        }
         Expression ex = new Expression(mathString);
 
         double sum = ex.calculate();
@@ -172,5 +178,4 @@ public class CalculatorFragment extends Fragment {
         }
         return startAmount - endAmount;
     }
-
 }
