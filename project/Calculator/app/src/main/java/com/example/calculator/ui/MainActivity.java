@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-
-        // Prevent reselecting
-        binding.bottomNavigationView.setOnItemReselectedListener(item -> System.out.println(item.getItemId()));
     }
 
     public void changeFragment(Class<? extends Fragment> f) {
