@@ -41,14 +41,14 @@ public class HistoryFragment extends Fragment {
             HistoryData.instance.setPlaceHolderFormula(f);
 
             MainActivity m = (MainActivity) getActivity();
-            m.changeFragment(CalculatorFragment.class);
+            m.updateNav(CalculatorFragment.class);
         });
         binding.lvHistory.setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, HistoryData.instance.getList()) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
 
-                textView.setTextColor(Color.rgb(244, 244, 244));
+                //textView.setTextColor(Color.rgb(244, 244, 244));
 
                 return textView;
             }

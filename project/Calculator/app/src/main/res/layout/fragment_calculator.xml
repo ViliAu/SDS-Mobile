@@ -13,7 +13,6 @@
         android:gravity="center"
         android:padding="8dp"
         android:text=""
-        android:textColor="#e0e0e0"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +44,7 @@
                 android:gravity="center"
 
                 android:text="+"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -59,7 +58,7 @@
                 android:gravity="center"
 
                 android:text="7"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -73,7 +72,7 @@
                 android:gravity="center"
 
                 android:text="4"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -87,7 +86,7 @@
                 android:gravity="center"
 
                 android:text="1"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -101,7 +100,7 @@
                 android:gravity="center"
 
                 android:text="CE"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="20sp" />
 
 
@@ -123,7 +122,7 @@
                 android:gravity="center"
 
                 android:text="-"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -137,7 +136,7 @@
                 android:gravity="center"
 
                 android:text="8"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -151,7 +150,7 @@
                 android:gravity="center"
 
                 android:text="5"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -165,7 +164,7 @@
                 android:gravity="center"
 
                 android:text="2"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -179,7 +178,7 @@
                 android:gravity="center"
 
                 android:text="0"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
         </LinearLayout>
 
@@ -199,8 +198,8 @@
                 android:gravity="center"
 
                 android:text="x"
-                android:textColor="#e0e0e0"
-                android:textSize="32sp" />
+                android:textColor="?android:attr/colorBackground"
+                android:textSize="28sp"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_9"
@@ -213,7 +212,7 @@
                 android:gravity="center"
 
                 android:text="9"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -227,7 +226,7 @@
                 android:gravity="center"
 
                 android:text="6"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -241,7 +240,7 @@
                 android:gravity="center"
 
                 android:text="3"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -255,7 +254,7 @@
                 android:gravity="center"
 
                 android:text="C"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
         </LinearLayout>
 
@@ -275,7 +274,7 @@
                 android:gravity="center"
 
                 android:text="/"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -289,7 +288,7 @@
                 android:gravity="center"
 
                 android:text="()"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -303,7 +302,7 @@
                 android:gravity="center"
 
                 android:text="^"
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -317,7 +316,7 @@
                 android:gravity="center"
 
                 android:text="."
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -331,7 +330,7 @@
                 android:gravity="center"
 
                 android:text="="
-                android:textColor="#e0e0e0"
+                android:textColor="?android:attr/colorBackground"
                 android:textSize="32sp" />
         </LinearLayout>
 

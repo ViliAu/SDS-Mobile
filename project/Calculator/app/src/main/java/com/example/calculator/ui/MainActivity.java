@@ -7,9 +7,11 @@
 
 package com.example.calculator.ui;
 
+import android.app.UiModeManager;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,8 +21,6 @@ import com.example.calculator.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String mathString = "";
-
     ActivityMainBinding binding;
 
     @Override
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
         initBottomNavigationView();
         changeFragment(CalculatorFragment.class);
@@ -45,11 +47,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void changeFragment(Class<? extends Fragment> f) {
+    private void changeFragment(Class<? extends Fragment> f) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(binding.fragmentContainer.getId(), f, null);
         //transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    // Called from history fragment
+    public void updateNav(Class<? extends Fragment> f) {
+        if (f == CalculatorFragment.class)
+            binding.bottomNavigationView.setSelectedItemId(R.id.calculate);
+        else
+            binding.bottomNavigationView.setSelectedItemId(R.id.history);
     }
 }
